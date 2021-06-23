@@ -1,0 +1,65 @@
+<!--<html>-->
+<!--<head></head>-->
+<!--<body>-->
+<!--    <script src="js/socket.io.js"></script>-->
+
+<!--    <form onsubmit="return sendMessage()">-->
+<!--        <input id="message" placeholder="Enter Message">-->
+<!--        <input type="submit" value="Send">-->
+<!--    </form>-->
+
+<!--    <ul id="messages"></ul>-->
+
+<!--    <script>-->
+<!--        let server="http://localhost:3000/"-->
+<!--        let io=io(server)-->
+
+<!--        function sendMessage()-->
+<!--        {-->
+<!--            let message=document.getElementById("message")-->
+
+<!--            //sending from client-->
+<!--            io.emit("new_message",message)-->
+
+<!--            return false-->
+<!--        }-->
+
+<!--       //client listen from server-->
+<!--        io.on("new_message",function (data){-->
+<!--            console.log("server Says   ",data)-->
+<!--        })-->
+
+<!--        let li=document.createElement("li")-->
+<!--        li.innerHTML=data-->
+
+<!--        let messages= document.getElementById("messages")-->
+<!--        messages.appendChild(li)-->
+
+<!--    </script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <b>Chat app</b>
+                <form onsubmit="return enterName()">
+                    <input id="name" placeholder="Enter name">
+                    <input type="submit" value="Send">
+                </form>
+        <ul id="users"></ul>
+                <hr>
+                <form onsubmit="return sendMessage()">
+                    <input id="message" placeholder="Enter Message">
+                    <input type="submit" value="Send">
+                </form>
+
+        <ul id="messages"></ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/chat.js"></script>
+    </body>
+</html>
